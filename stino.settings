@@ -1,0 +1,7 @@
+{
+    "arduino_folder": "/usr/share/arduino", 
+    "board": 0, 
+    "full_compilation": false, 
+    "platform": 1, 
+    "platform_name": "Arduino AVR Boards"
+}
