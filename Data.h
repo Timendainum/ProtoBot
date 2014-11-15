@@ -43,7 +43,7 @@ public:
 
     static long ForwardRange[7];
     static unsigned long ForwardRangeUpdate[7];
-    static int CompassX, CompassY, CompassZ;
+    static float CompassHeading;
     static Servo* FrontServo;
     static int ScanDegrees[7];
 

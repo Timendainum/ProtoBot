@@ -14,7 +14,7 @@ void BReadCompass::execute()
 		#if __BREADCOMPASS_H__DEBUG
 			Serial.println("Reading compass!");
 		#endif
-		compass.update(&data.CompassX, &data.CompassY, &data.CompassZ);
+		compass.update(&data.CompassHeading);
 		lastReadTime = simpleTimer.getTime();
 	}
 }

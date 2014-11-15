@@ -12,9 +12,7 @@ long Data::ForwardRange[7];
 unsigned long Data::ForwardRangeUpdate[7];
 int Data::ScanDegrees[7] = {FS_LEFT_100, FS_LEFT_66, FS_LEFT_33, FS_CENTER, FS_RIGHT_33, FS_RIGHT_66, FS_RIGHT_100};
 
-int Data::CompassX;
-int Data::CompassY;
-int Data::CompassZ;
+float Data::CompassHeading;
 Servo* Data::FrontServo;
 
 

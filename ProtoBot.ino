@@ -14,12 +14,11 @@
 #include <Arduino.h>
 #include <Servo.h>
 #include <Wire.h>
-
+#include "HMC5883L.h"
+#include "ThreeDCompass.h"
 #include "RangeFinder.h"
 #include "MotorDriver.h"
 #include "SimpleTimer.h"
-#include "ThreeDCompass.h"
-
 #include "Data.h"
 #include "Motivator.h"
 #include "ProtoMotivator.h"
@@ -44,11 +43,12 @@ void setup()
   run = true;
   
   //timer
-  Serial.println("Init timer...");
   simpleTimer.init();
 
   //compass
+  // Initialize Initialize HMC5883L
   compass.init();
+  
 
   //Configure the motor A to control the wheel at the left side.
   //Configure the motor B to control the wheel at the right side.
