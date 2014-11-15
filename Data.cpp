@@ -43,6 +43,25 @@ bool Data::LeftObstruction()
 		ForwardRange[FS_LEFT_33_ID] < FS_OBSTRUCTION_RANGE;
 }
 
+///////////////////////////////////////////////////////////////////////////////
+// Obstruction Range
+long Data::DirectFrontObstructionRange()
+{
+	return ForwardRange[FS_CENTER_ID];
+}
+
+long Data::FrontObstructionRange()
+{
+	return (ForwardRange[FS_LEFT_33_ID] + ForwardRange[FS_CENTER_ID] + ForwardRange[FS_RIGHT_33_ID])/3;
+}
+long Data::RightObstructionRange()
+{
+	return (ForwardRange[FS_RIGHT_100_ID] + ForwardRange[FS_RIGHT_66_ID] + ForwardRange[FS_RIGHT_33_ID])/3;
+}
+long Data::LeftObstructionRange()
+{
+	return (ForwardRange[FS_LEFT_100_ID] + ForwardRange[FS_LEFT_66_ID] + ForwardRange[FS_LEFT_33_ID])/3;
+}
 
 ///////////////////////////////////////////////////////////////////////////////
 // Stale
@@ -69,6 +88,11 @@ bool Data::LeftStale()
 bool Data::AnyStale(unsigned long age)
 {
 	return FrontStale(age) || RightStale(age) || LeftStale (age);
+}
+
+bool Data::DirectFrontStale(unsigned long age)
+{
+	return calcStale(FS_CENTER_ID, age);
 }
 
 bool Data::FrontStale(unsigned long age)

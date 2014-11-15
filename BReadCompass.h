@@ -1,6 +1,6 @@
 #ifndef __BREADCOMPASS_H__
 #define __BREADCOMPASS_H__
-#define __BREADCOMPASS_H__DEBUG 1
+#define __BREADCOMPASS_H__DEBUG 0
 #define READ_DELAY 100
 
 #include <Wire.h>

@@ -83,6 +83,7 @@ void loop()
   if (run)
     motivator.motivate();
 
+  //Serial.println("Current Heading: " + (String)data.CompassHeading);
 
 #if __PROTO_DEBUG__
   Serial.println("--- Tick End");
