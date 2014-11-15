@@ -4,13 +4,13 @@ BScan::BScan() {}
 
 void BScan::init()
 {
-	lastMoveOrderTime = timer.getTime();
+	lastMoveOrderTime = simpleTimer.getTime();
 	moved = false;
 }
 
 bool BScan::scan(int pos, unsigned long moveDelay)
 {
-	if ((timer.getTime() - lastMoveOrderTime) > moveDelay)
+	if ((simpleTimer.getTime() - lastMoveOrderTime) > moveDelay)
 	{
 		ping(pos);
 		return true;
@@ -40,7 +40,7 @@ void BScan::ping(int pos)
 	#endif
 
 	data.ForwardRange[pos] = rangeFinder.getDistance();
-	data.ForwardRangeUpdate[pos] = timer.getTime();
+	data.ForwardRangeUpdate[pos] = simpleTimer.getTime();
 
 	#if __BSCAN_H__DEBUG
 		Serial.println("Range: " + (String)data.ForwardRange[pos]);

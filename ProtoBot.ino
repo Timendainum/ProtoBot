@@ -17,7 +17,7 @@
 
 #include "RangeFinder.h"
 #include "MotorDriver.h"
-#include "Timer.h"
+#include "SimpleTimer.h"
 #include "ThreeDCompass.h"
 
 #include "Data.h"
@@ -45,7 +45,7 @@ void setup()
   
   //timer
   Serial.println("Init timer...");
-  timer.init();
+  simpleTimer.init();
 
   //compass
   compass.init();
@@ -59,7 +59,7 @@ void setup()
   
   //configure rangefinder
   Serial.println("Init rangefinder...");
-  rangeFinder.init(TP, EP, 1);
+  rangeFinder.init(TP, EP);
   frontServo.attach(SERVO1_SIGNAL);
   data.FrontServo = &frontServo;
 }
@@ -77,7 +77,7 @@ void loop()
     run = true;
 
   //Timer update
-  timer.update();
+  simpleTimer.update();
 
   //Motivate
   if (run)

@@ -5,7 +5,7 @@
 
 #include <Wire.h>
 #include "ThreeDCompass.h"
-#include "Timer.h"
+#include "SimpleTimer.h"
 #include "MotorDriver.h"
 #include "Behavior.h"
 #include "Data.h"

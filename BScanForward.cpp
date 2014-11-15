@@ -12,7 +12,7 @@ void BScanForward::execute()
 {
 	if (scan(currentMoveOrder, MOVE_DELAY))
 	{
-		lastMoveOrderTime = timer.getTime();
+		lastMoveOrderTime = simpleTimer.getTime();
 		moved = false;
 		if (goingUp)
 		{

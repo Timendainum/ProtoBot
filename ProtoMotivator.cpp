@@ -80,7 +80,7 @@ void ProtoMotivator::motivate()
 		{
 			Serial.println("New goal: GOAL_AVOID_OBSTRUCTION");
 			goal = GOAL_AVOID_OBSTRUCTION;
-			goalStartTime = timer.getTime();
+			goalStartTime = simpleTimer.getTime();
 			avoidChosen = false;
 		}
 		if (shouldBeActive && isActive)
@@ -89,7 +89,7 @@ void ProtoMotivator::motivate()
 			#if __PROTOMOTIVATOR_H__DEBUG
 				Serial.println("GOAL_AVOID_OBSTRUCTION");
 			#endif
-			if (timer.getTime() > (goalStartTime + G_AVOIDSCANTIME))
+			if (simpleTimer.getTime() > (goalStartTime + G_AVOIDSCANTIME))
 			{
 				//
 				if (!avoidChosen)
@@ -151,7 +151,7 @@ void ProtoMotivator::motivate()
 		{
 			Serial.println("New goal: GOAL_DEFAULT");
 			goal = GOAL_DEFAULT;
-			goalStartTime = timer.getTime();
+			goalStartTime = simpleTimer.getTime();
 		}
 		if (shouldBeActive && isActive)
 		{

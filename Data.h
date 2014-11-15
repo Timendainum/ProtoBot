@@ -25,7 +25,7 @@
 #define FS_RIGHT_100_I  6
 
 #include <Servo.h>
-#include <Timer.h>
+#include <SimpleTimer.h>
 
 class Data
 {

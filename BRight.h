@@ -4,7 +4,6 @@
 
 
 #include "Behavior.h"
-#include "Timer.h"
 #include "MotorDriver.h"
 
 class BRight: public Behavior

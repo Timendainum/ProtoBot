@@ -95,7 +95,7 @@ bool Data::LeftStale(unsigned long age)
 //privattes
 bool Data::calcStale(int pos, unsigned long age)
 {
-	return timer.getTime() - ForwardRangeUpdate[pos] > age;
+	return simpleTimer.getTime() - ForwardRangeUpdate[pos] > age;
 }
 
 ///////////////////////////////////////////////////////////////////////////////

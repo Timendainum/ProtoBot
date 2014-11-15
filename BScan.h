@@ -3,7 +3,7 @@
 #define __BSCAN_H__DEBUG 0
 
 #include <Servo.h>
-#include "Timer.h"
+#include "SimpleTimer.h"
 #include "RangeFinder.h"
 #include "Behavior.h"
 #include "Data.h"
