@@ -24,7 +24,7 @@
 #define G_AVOIDSCANTIME 		2000
 #define G_AVOIDTURNDEGREES		30
 #define G_AVOIDTURNSLOP			3
-#define G_AVOIDCRITICALRANGE	10
+#define G_AVOIDCRITICALRANGE	5
 
 #include <Arduino.h>
 #include <Servo.h>
